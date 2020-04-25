@@ -1,7 +1,7 @@
 # SQL Injection techniques
 
 ```
-h/t: https://twitter.com/pwntheweb/status/1253224265853198336
+[@pwntheweb] https://twitter.com/pwntheweb/status/1253224265853198336
 
 /?q=1
 /?q=1'
