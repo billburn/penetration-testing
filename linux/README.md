@@ -26,3 +26,16 @@ WantedBy=multi-user.target' > $TF
 ```
 grep -ilR "flag11" / 2>/dev/null
 ```
+
+## Remove all newline space from file 
+```
+tr -d "\n\r" < yourfile.txt
+```
+
+## Remove specific character or space from Nano
+```
+ctrl + \
+search the file _char
+replace the file _char
+choose option
+```
