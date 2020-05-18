@@ -21,3 +21,8 @@ WantedBy=multi-user.target' > $TF
 ./systemctl link $TF
 ./systemctl enable --now $TF
 ```
+
+## Grep all file for string
+```
+grep -ilR "flag11" / 2>/dev/null
+```
