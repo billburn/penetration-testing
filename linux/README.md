@@ -62,4 +62,7 @@ test:x:0:0:root:/root:/bin/bash => [as divided by colon (:)]
 How to exploit a writable /etc/passwd
 
 If we have a writable /etc/passwd file, we can write a new line entry according to the above formula and create a new user! We add the password hash of our choice, and set the UID, GID and shell to root. 
+
+Create the password you want to add: "openssl passwd -1 -salt [salt] [password]"
+
 ```
