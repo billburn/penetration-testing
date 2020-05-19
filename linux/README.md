@@ -39,3 +39,8 @@ search the file _char
 replace the file _char
 choose option
 ```
+
+## Find SUID Files
+```
+find / -perm -u=s -type f 2>/dev/null
+```
