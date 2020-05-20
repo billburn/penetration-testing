@@ -1,11 +1,11 @@
 # Nessus
 
-# Start Nessus
+## Start Nessus
 ```
 /etc/init.d/nessusd start
 ```
 
-# Autostart on bootup (Ubuntu / Kali)
+## Autostart on bootup (Ubuntu / Kali)
 ```
 sudo update-rc.d nessud enable
 ```
