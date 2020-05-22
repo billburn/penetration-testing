@@ -1,5 +1,10 @@
+## Python2 Sockets
+
+
+```
 #!/usr/bin/python
 #author: bill burn
+## Redevelop in python3
 
 import socket
 import sys
@@ -15,3 +20,4 @@ while 1:
     print s.recv(2048)
 
 s.close()
+```
