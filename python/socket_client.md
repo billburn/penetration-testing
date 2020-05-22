@@ -3,8 +3,7 @@
 
 ```
 #!/usr/bin/python
-#author: bill burn
-## Redevelop in python3
+# Redevelop in python3
 
 import socket
 import sys
