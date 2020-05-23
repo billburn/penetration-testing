@@ -37,5 +37,6 @@ run shell and you should have SYSTEM shell
 
 ## Abusing Token Privileges - More Reading
 ```
+[Microsoft Access Tokens] https://docs.microsoft.com/en-us/windows/win32/secauthz/access-tokens
 [Exploit-DB] https://www.exploit-db.com/papers/42556
 ```
