@@ -2,6 +2,7 @@
 
 ## TryHackMe Challenge to decode a textfile
 ```
+#!/usr/bin/env python3
 import base64
 
 fo = open("encodedflag.txt","r")
@@ -27,4 +28,6 @@ b64_data3 = base64.b64decode(b64_data2)
 b64_data4 = base64.b64decode(b64_data3)
 b64_data5 = base64.b64decode(b64_data4)
 print(b64_data5)
+
+fo.close()
 ```
