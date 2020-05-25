@@ -1,6 +1,11 @@
 # Hashcat Common Commands
 
-## NTML
+## NTLM
 ```
- hashcat64.exe -m 1000 dark.hash rockyou.txt
+ hashcat64.exe -m 1000 <hash.name> rockyou.txt
+```
+
+## SHA-256
+```
+hashcat -m 1400 <hash.name> rockyou.txt
 ```
