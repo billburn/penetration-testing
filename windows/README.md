@@ -6,13 +6,3 @@
  
  dir /S /B filename*.txt
  ```
-## Searching for files names with PowerShell
-```
-Get-Childitem –Path C:\ -Include *search-string* -File -Recurse
-```
-
- ## Decoding Base64
- ```
- $string = "some-base64 aksdjklasd=="
- [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($string))
-  ```

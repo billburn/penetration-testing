@@ -38,3 +38,18 @@ c:\> start-process shell.exe
 c:\> .\shell.exe
 ```
 
+## Searching for files names with PowerShell
+```
+Get-Childitem –Path C:\ -Include *search-string* -File -Recurse
+```
+
+ ## Decoding Base64
+ ```
+ $string = "some-base64 aksdjklasd=="
+ [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($string))
+  ```
+
+## Reading Users PowerShell History
+```
+%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
