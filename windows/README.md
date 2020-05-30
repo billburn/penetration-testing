@@ -6,3 +6,9 @@
  
  dir /S /B filename*.txt
  ```
+
+ ## Decoding Base64
+ ```
+ $string = "some-base64 aksdjklasd=="
+ [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($string))
+  ```
