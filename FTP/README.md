@@ -1,6 +1,6 @@
 # FTP Commands
 
-## Logining in
+## Logging in
 ```
 ftp 10.10.10.10 21
 ```
