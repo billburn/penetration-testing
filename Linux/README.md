@@ -1,5 +1,13 @@
 # Linux Enumeration Tips
 
+## Default Ubuntu File Permissions
+```
+* Folders should be 0755
+* Files shuld be 0664
+find /home/user -type d -print0 | xargs -0 chmod 0775
+find /home/user -type f -print0 | xargs -0 chmod 0664
+```
+
 ## Grep all file for string
 ```
 grep -ilR "flag11" / 2>/dev/null
