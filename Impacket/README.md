@@ -8,7 +8,7 @@ Sample Usage: $python3 impacket-smbserver -u myusername -p secretpassword myshar
 Tip: use $(pwd) for the current working  directory
 ```
 
-## MSSQL Client
+## MSSQLClient
 ```
 $python3 mssqlclient.py -port 1433 -db volume -windows-auth <username>@<ip address>
 ```
