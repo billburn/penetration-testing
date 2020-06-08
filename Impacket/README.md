@@ -9,6 +9,12 @@ Sample Usage: $python3 impacket-smbserver -u myusername -p secretpassword myshar
 Tip: use $(pwd) for the current working  directory
 ```
 
+## PSExec
+```
+$python3 psexec.py username@<ip address>
+Sample Usage: $python3 psexec.py Administrator@10.10.10.10 (enter password when prompted)
+```
+
 ## MSSQLClient
 ```
 $python3 mssqlclient.py -port 1433 -db volume -windows-auth <username>@<ip address>
