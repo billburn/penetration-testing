@@ -9,7 +9,8 @@
 
 ## SmbClient
 ```
-[Enumerate SMB Shares - NULL Sessio] $smbclient -L //<ipaddress>
+[Enumerate SMB Shares - NULL Session] $smbclient -L //<ipaddress>
+[Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
 ```
 
 ## SmbMap
