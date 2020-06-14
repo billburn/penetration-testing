@@ -1,5 +1,10 @@
 # PowerShell
 
+## Importing Module
+```
+Import-Module <name of ps1>
+```
+
 ## Checking Services
 ```
 get-service AdvancedSystemCareService9

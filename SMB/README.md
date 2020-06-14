@@ -1,12 +1,5 @@
 # SMB Tools
 
-## CrackMapExec
-[URL] (https://github.com/byt3bl33d3r/CrackMapExec)
-```
-[Enumerated SMB Shares] $crackmapexec smb <ip address> --shares -u <username> -p <password>
-[Password Spary User List and Password] $crackmapexec smb <ip address> -u <users.lst> -p <password> --continue-on-success
-```
-
 ## SmbClient
 ```
 [Enumerate SMB Shares - NULL Session] $smbclient -L //<ipaddress>
