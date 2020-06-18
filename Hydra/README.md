@@ -1,5 +1,15 @@
 # Hydra Usage
 
+## PREREQUISITES
+```
+[url] https://github.com/vanhauser-thc/thc-hydra/issues/344
+sudo apt install libssl-dev libssh-dev libidn11-dev libpcre3-dev libgtk2.0-dev libmysqlclient-dev libpq-dev libsvn-dev firebird-dev libmemcached-dev libgpg-error-dev libgcrypt11-dev libgcrypt20-dev
+./configure
+make clean
+./configure && make
+sudo make install
+```
+
 ## HTTP-GET
 ```
 hydra -l bob -P /usr/share/wordlists/rockyou.txt 10.10.71.162 http-get /protected
