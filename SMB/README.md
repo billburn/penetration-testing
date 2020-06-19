@@ -24,3 +24,9 @@ NOTE: May need to install cifs-utils (sudo apt install cifs-utils)
 1) mkdir /mnt/<sharename>
 2) sudo mount -t cifs -o 'username=<username>,password=<password>' //<ip address>/sharename /mnt/<sharename>
 ```
+
+## NOTES ABOUT MS17-010
+```
+[URL] https://www.sevenlayers.com/index.php/146-unable-to-find-accessible-named-pipe
+Essentially, sometimes you just need a set of creds to launch this attack - see write-up
+```
