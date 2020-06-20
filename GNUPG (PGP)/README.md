@@ -1,5 +1,7 @@
 # GNUPG
 
+[URL] (https://superuser.com/questions/1196165/pgp-file-decryption-from-linux-cmd-line)
+
 ## Stealing Private Key / Cracking Hash
 ```
 * If you come across .asc with a private key, but no password.  Copy the private key down with ncat or similiar
