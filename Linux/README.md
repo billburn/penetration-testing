@@ -31,3 +31,7 @@ choose option
 find / -perm -u=s -type f 2>/dev/null
 ```
 
+## CAT not working
+```
+Have you tried less?
+```
