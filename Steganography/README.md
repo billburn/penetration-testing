@@ -23,3 +23,8 @@ steghide extract -sf Extinction.jpg -xf data
 [URL] https://zxing.org/w/decode.jspx
 Upload the file or provide a URL to decode
 ```
+
+## MP3 to Text
+```
+[URL] https://speech-to-text-demo.ng.bluemix.net/
+```
