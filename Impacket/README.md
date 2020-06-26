@@ -5,6 +5,7 @@
 $sudo python3 impacket-smbserver -u <username> -p <password> <name of share> <location of share>
 $sudo python3 impacket-smbserver -smb2support -u <username> -p <password> <name of share> <location of share>
 $sudo impacket-smbserver -smb2support <name of share> `pwd`
+$sudo python3 smbserver.py -smb2support files $(pwd) -username test -password test
 
 Sample Usage: $python3 impacket-smbserver -u myusername -p secretpassword myshare $(pwd)
 Tip: use $(pwd) for the current working  directory
