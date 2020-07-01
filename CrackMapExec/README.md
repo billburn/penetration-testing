@@ -4,11 +4,17 @@
 ## Enumerate SMB Shares
 ```
 [Enumerated SMB Shares] $crackmapexec smb <ip address> --shares -u <username> -p <password>
+[Enumerated SMB Shares (alternative)] $crackmapexec smb <ip address> --shares -u <username> -p '<password>'
+```
+
+## Enumerate Password Policy
+```
+[Password Policy] $crackmapexec smb --pass-pol <ipaddress>
 ```
 
 ## Password Spray Users
 ```
-[Password Spary User List and Password] $crackmapexec smb <ip address> -u <users.lst> -p <password> --continue-on-success
+[Password Spray User List and Password] $crackmapexec smb <ip address> -u <users.lst> -p <password> --continue-on-success
 ```
 
 ## Null Session

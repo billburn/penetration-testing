@@ -3,6 +3,8 @@
 ## SmbClient
 ```
 [Enumerate SMB Shares - NULL Session] $smbclient -L //<ipaddress>
+[Enumerate SMB Shares as Users] $smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
+[Enumerate SMB Shares - NULL Session] $smbclient -U '' -N -L //<ipaddress>
 [Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
 ```
 
@@ -10,6 +12,12 @@
 [URL] (https://github.com/ShawnDEvans/smbmap)
 ```
 [Enumerate SMB Shares - NULL Session] $smbmap -H <ip address> -u <username>
+```
+
+## RPCCline
+```
+[NULL Session] $ rpcclient <ipaddress>
+[NULL Session] $ rpcclient -U '' <ipaddress>
 ```
 
 ## Mount SMB to Linux Filesystem
