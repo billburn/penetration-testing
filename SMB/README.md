@@ -14,7 +14,7 @@
 [Enumerate SMB Shares - NULL Session] $smbmap -H <ip address> -u <username>
 ```
 
-## RPCCline
+## RPCClient
 ```
 [NULL Session] $ rpcclient <ipaddress>
 [NULL Session] $ rpcclient -U '' <ipaddress>

