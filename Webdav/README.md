@@ -24,6 +24,18 @@ Set remote port (80)
 
 ![Davtest-02](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-02.png)
 
-## Testing Webdav with Davtest
+## Davtest
 
 ![Davtest-03](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-03.png)
+
+## Test upload using post
+
+```
+1) Send one of the PUT request to the repeater tab
+2) Modify the URL to /test.html or whatever you like
+3) In the body add some text and send the request; you should get a 200 
+```
+
+![Davtest-04](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-04.png)
+
+![Davtest-05](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-05.png)
