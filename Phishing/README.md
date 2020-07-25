@@ -3,7 +3,11 @@
 
 ## Bash and SWAKS
 
-* email.txt contains a list of email addresses to phish
+[URL] (https://ryanstutorials.net/bash-scripting-tutorial/bash-loops.php)
+
+[*] email.txt contains a list of email addresses to phish
+
+
 
 ```
 phishing-script.sh 
