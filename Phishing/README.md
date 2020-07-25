@@ -13,5 +13,5 @@
 phishing-script.sh 
 #!/bin/sh
 
-while read email; do swaks –to $email –from admin@some-domain –header "Subject: Please send me your creds!" –body "http://10.10.14.49/" –server 10.10.10.10; done < email.txt
+while read email; do swaks -to $email -from admin@spoofed-domain.com -header "Subject: Can I Haz Creds Plz" -body "goto http://10.10.10.10/" -server 10.10.100.100; echo "Sleeping 5"; sleep 5; done < email.txt
 ```
