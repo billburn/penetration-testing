@@ -12,6 +12,7 @@
 [URL] (https://github.com/ShawnDEvans/smbmap)
 ```
 [Enumerate SMB Shares - NULL Session] $smbmap -H <ip address> -u <username>
+[Enumerate SMB Shares - User] smbmap -H 10.10.10.10 -u administrator
 ```
 
 ## RPCClient
@@ -37,4 +38,10 @@ NOTE: May need to install cifs-utils (sudo apt install cifs-utils)
 ```
 [URL] https://www.sevenlayers.com/index.php/146-unable-to-find-accessible-named-pipe
 Essentially, sometimes you just need a set of creds to launch this attack - see write-up
+```
+
+## Resource on SMB and PTH
+```
+[URL] https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/
+[URL] https://eaneatfruit.github.io/2019/08/18/Offensive-Lateral-Movement/
 ```
