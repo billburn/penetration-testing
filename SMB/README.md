@@ -11,14 +11,13 @@
 ## SmbMap
 [URL] (https://github.com/ShawnDEvans/smbmap)
 ```
-[Enumerate SMB Shares - NULL Session] $smbmap -H <ip address> -u <username>
+[Enumerate SMB Shares - NULL Session] $smbmap -H <ip address>
 [Enumerate SMB Shares - User] smbmap -H 10.10.10.10 -u administrator
 ```
 
 ## RPCClient
 ```
-[NULL Session] $ rpcclient <ipaddress>
-[NULL Session] $ rpcclient -U '' <ipaddress>
+rpcclient -U "" -N 192.168.10.14
 ```
 
 ## Mount SMB to Linux Filesystem

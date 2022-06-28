@@ -2,7 +2,7 @@
 
 ## Null Session Login
 ```
-$rpcclient -U '' <ipaddress>
+$rpcclient -U "" -N 192.168.10.14
 ```
 
 ## Enumerate Users
