@@ -3,8 +3,8 @@
 ## SmbClient
 ```
 [Enumerate SMB Shares - NULL Session] $smbclient -L //<ipaddress>
+[Enumerate SMB Shares - NULL Session] $smbclient --no-pass -L //<ipaddress>
 [Enumerate SMB Shares as Users] $smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
-[Enumerate SMB Shares - NULL Session] $smbclient -U '' -N -L //<ipaddress>
 [Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
 ```
 
@@ -12,12 +12,24 @@
 [URL] (https://github.com/ShawnDEvans/smbmap)
 ```
 [Enumerate SMB Shares - NULL Session] $smbmap -H <ip address>
-[Enumerate SMB Shares - User] smbmap -H 10.10.10.10 -u administrator
+[Enumerate SMB Shares - User] smbmap -H 10.10.10.10 -u <user> -d <domain> -p <password>
+smbmap -u <username> -p <password> -H <ip address> [-P <port>] #Creds
+smbmap -u <username> -p "<NT>:<LM>" -H <ip address> [-P <port>] #Pass-the-Hash
 ```
 
 ## RPCClient
 ```
 rpcclient -U "" -N 192.168.10.14
+```
+
+## Enum4linux
+```
+enum4linux -a -v -u <username> -p <password> <ip address>
+```
+
+## NMAP
+```
+nmap --script smb-enum-shares -p 139,445 <ip address>
 ```
 
 ## Mount SMB to Linux Filesystem
