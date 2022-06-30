@@ -15,3 +15,15 @@ openssl passwd -6
 Enter password at the prompt: P@ssw0rd123
 $6$klHi1Tjk3xO7Gk2F$qVfbmPZ1sLfqVIXnLG7Dn0Mdxnrd.eT3NC5ZuQR0/YNdyl.kFC42NU7VJQ2uhKPlG1nC4PI5YE72BBKCeLmBX0
 ```
+
+## Crack Zip File
+```
+zip2john [zip_file_name] > zip_file_name.hash
+```
+
+
+## Crack RSA Private Key
+```
+ssh2john id_rsa > id_rsa.hash
+john --wordlist:/usr/share/wordlist/rockyou.txt id_rsa.hash
+```
