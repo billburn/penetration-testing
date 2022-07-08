@@ -8,6 +8,16 @@
 [Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
 ```
 
+## SmbClient Download All Files in Directory
+```
+smbclient //192.168.10.100/SHARENAME --no-pass
+mask ""
+recurse ON
+prompt OFF
+lcd .
+mget *
+```
+
 ## SmbMap
 [URL] (https://github.com/ShawnDEvans/smbmap)
 ```
