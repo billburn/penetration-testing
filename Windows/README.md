@@ -18,3 +18,8 @@
  cp <filename> f:\ 
  (or location)
  ```
+
+ ## Disable Windows Firewall CLI
+ ```
+ netsh advfirewall set allprofiles state off
+ ```

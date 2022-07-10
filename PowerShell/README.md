@@ -102,3 +102,8 @@ $cred = New-Object System.Management.Automation.PSCredential($user, $pass)
 ```
 PS $cred.GetNetworkCredential().Password
 ```
+
+## Search all files for keyword
+```
+type * | findstr "password"
+```
