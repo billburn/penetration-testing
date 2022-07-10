@@ -10,6 +10,7 @@
  ## Map Drive from CLI
  ```
  net use f: \\10.10.14.49\files /user:ph0enix password123
+ net use M: \\ip-address\share /Persistent:Yes
  ```
 
  ## Copy File to Mapped Drive

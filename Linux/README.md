@@ -31,7 +31,17 @@ choose option
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-## CAT not working
+## cat not working
 ```
 Have you tried less?
+```
+
+## Convert all UPPER to lower or lower to UPPER
+```
+cat TEXT or filename.txt | tr [:upper:] [:lower:]
+```
+
+## Send Email Message with Attachment
+```
+sendemail -t nico@megabank.com -f badguy@ph0enix.local -s reel.htb.local -u RTF -m "Important" -a invoice.rtf
 ```

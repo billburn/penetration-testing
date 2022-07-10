@@ -19,3 +19,10 @@ Browse to http://localhost:7474
 sudo neo4j console
 ./Bloodhound --no-sandbox
 ```
+
+## Running SharpHound
+```
+Install the module: . .\SharpHound.ps1
+Invoke-BloodHound -CollectionMethod All -Domain <domain> -ZipFileName <filename.zip>
+```
+
