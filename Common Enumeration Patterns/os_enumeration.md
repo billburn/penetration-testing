@@ -1,4 +1,4 @@
-# OS and Patch Information
+# OS and Patch Enumeration
 
 | Command	| Summary |
 | --------- | ---------------------------- |
