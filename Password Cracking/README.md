@@ -27,3 +27,11 @@ zip2john [zip_file_name] > zip_file_name.hash
 ssh2john id_rsa > id_rsa.hash
 john --wordlist:/usr/share/wordlist/rockyou.txt id_rsa.hash
 ```
+
+## Clear Text Credential Dumping
+
+[Credential Dumping With WCM](https://www.hackingarticles.in/credential-dumping-windows-credential-manager/)
+```
+## requires GUI access
+rundll32 keymgr.dll, KRShowKeyMgr
+```
