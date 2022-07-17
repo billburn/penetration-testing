@@ -2,10 +2,11 @@
 
 ## SmbClient
 ```
-[Enumerate SMB Shares - NULL Session] $smbclient -L //<ipaddress>
-[Enumerate SMB Shares - NULL Session] $smbclient --no-pass -L //<ipaddress>
-[Enumerate SMB Shares as Users] $smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
+[Enumerate SMB Share NULL Session] $smbclient -L //<ipaddress>
+[Enumerate SMB Share NULL Session] $smbclient --no-pass -L //<ipaddress>
+[Enumerate SMB Share as User] $smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
 [Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
+[Connect to SMB Share with Domain and Password] smbclient //10.129.97.122/new-site --user=<username> --workgroup=<domain.local> --password='password'
 ```
 
 ## SmbClient Download All Files in Directory
