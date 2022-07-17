@@ -51,14 +51,14 @@ Ctrl + C to stop
 ```
 
 ## Capture Handshake
-- **(NOTE: This is for testing purposes only, do NOT capture for wireless networks that you don't own)**
+- **(NOTE: This is for testing purposes only, do NOT capture packets for wireless networks that you don't own)**
 
 ```
 airodump --bssid <mac address of ap> --channel <id> wlan0 --output-format pcap --write <name of pcap>
 ```
 
 ## Deauthentication Attack
-- **(NOTE: This is for testing purposes only, do NOT capture for wireless networks that you don't own)**
+- **(NOTE: This is for testing purposes only, do NOT capture packets for wireless networks that you don't own)**
 ```
 aireplay-ng -0 1 -a <mac addredss of ap> -c <mac address of client> wlan0
 ```
@@ -69,7 +69,7 @@ airmon-ng stop wlan0
 ```
 
 ## Audit password strength of captured network hash
-- **(NOTE: This is for testing purposes only, do NOT capture for wireless networks that you don't own)**
+- **(NOTE: This is for testing purposes only, do NOT capture packets for wireless networks that you don't own)**
 ```
 aircrack-ng <name of pcap> -w /usr/share/wordlists/rockyou.txt
 ```
