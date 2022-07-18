@@ -4,10 +4,13 @@
 | Command | Summary |
 | --------- | ---------------------------- |
 | ```dir <name of file> /s /p``` | Search the file system, recursively for the filename |
+| ```whoami /priv``` | Gets the privileges for current user context |
+| ```more < name_of_alternate_data_stream.txt``` | Returns the contents of the alternate data stream | 
 
 | Check | Description |
 | --------- | ---------------------------- |
 | PowerShell IWR vs IEX | Be sure to remember IEX will run the script in memory, useful for loading SharpHound.ps1 remotely |
+| What tokens are on machine | If there tokens on the machine, you may be able to switch into that user, and elevate privileges |
 
 ## Common Location for WSL.exe
 ```
