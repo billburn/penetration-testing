@@ -1,7 +1,7 @@
 # User Enumeration
 
 | Command | Summary |
-| --------- | ---------------------------- |
+| ---------------------------- | ---------------------------- |
 | whoami | Returns the user context that you are running as |
 | whoami /priv | Returns the privileges for the user context that you are running as |
 | whoami /groups | Returns the groups for the user context that you are running as |
