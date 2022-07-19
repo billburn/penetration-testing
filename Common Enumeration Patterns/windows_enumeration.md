@@ -13,6 +13,7 @@
 | ---------------------------- | ---------------------------- |
 | PowerShell IWR vs IEX | Be sure to remember IEX will run the script in memory, useful for loading SharpHound.ps1 remotely |
 | What tokens are on machine | If there tokens on the machine, you may be able to switch into that user, and elevate privileges |
+| Check for autoruns | These are programs that can run with elevated permissions. If they have execissive permssions (EVERYONE) you can replace the binary and elevate access |
 
 ## Common Location for WSL.exe
 ```
