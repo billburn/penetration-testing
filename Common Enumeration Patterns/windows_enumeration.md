@@ -11,6 +11,7 @@
 | ```accesschk64.exe -wvu <file.exe>``` | This will check the files access writes |
 | ```icacls.exe <filename.txt>``` | Does the same thing as accesschk64.exe but is native to OS |
 | ```accesschk64.exe -uwcv Everyone *``` | Searches the file system for world-writeable service binaries |
+| ```accesschk64.exe -uwcv <name_of_service>``` | Once you identify a service, get more detail by searching for the single service name |
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
