@@ -19,7 +19,13 @@
  (or location)
  ```
 
- ## Disable Windows Firewall CLI
+ ## Enable/Disable Windows Firewall CLI
  ```
+ NetSh Advfirewall set allprofiles state on
  netsh advfirewall set allprofiles state off
+ ```
+
+ ## Enable RDP (Terminal Services)
+ ```
+ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
  ```
