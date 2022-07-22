@@ -53,3 +53,11 @@ $python3 lookupsid.py <domain/username:password@hostname>
 ```
 python secretsdump.py htb.local/Administrator@reel.htb.local (enter password when prompted)
 ```
+
+## Windows 10 SMBShare Can Connect
+[URL](https://www.youtube.com/watch?v=vyatMj1Z2NQ)
+```
+Regedit
+Browse to: Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
+Create a DWORD 32bit key: AllowInsecureGuestAuth and set to 1 for on, 0 for off
+```

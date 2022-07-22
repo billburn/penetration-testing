@@ -24,6 +24,7 @@
 | If Binary Path has issue | We can modify the path to our malicious payload, add your self to Administrators group, or use other techniques |
 | Check with PowerUp.ps1 | Make sure you have modified the script to Invoke-AllChecks |
 | Older Windows OS Win7, Win2008 | Check MS10-059 (Chimichurri) ```https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059``` |
+| Be sure to check program files and (x86) | Enumerate all of the software that might be loaded on the machine |
 
 ## Common Location for WSL.exe
 ```

@@ -29,3 +29,10 @@
  ```
  reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
  ```
+
+ ## Mount a VHD Drive
+ - ```--add`` is the name of the file
+ ```
+ mkdir /mnt/vhd
+ sudo guestmount --add 9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro -v /mnt/vhd
+ ```

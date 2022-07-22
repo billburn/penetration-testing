@@ -35,3 +35,8 @@ john --wordlist:/usr/share/wordlist/rockyou.txt id_rsa.hash
 ## requires GUI access
 rundll32 keymgr.dll, KRShowKeyMgr
 ```
+
+## Recover Passwords from SAM and SYSTEM
+```
+sudo samdump2 SYSTEM SAM > hashes.txt
+```
