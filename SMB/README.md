@@ -2,10 +2,12 @@
 
 ## SmbClient
 ```
-[Enumerate SMB Share NULL Session] $smbclient -L //<ipaddress>
-[Enumerate SMB Share NULL Session] $smbclient --no-pass -L //<ipaddress>
-[Enumerate SMB Share as User] $smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
-[Connect to SMB Share] $smbclient //<ipaddress>/<sharename> -U <username>
+[Enumerate SMB Share NULL Session] smbclient -L \\\\<ipaddress>  #List the shares
+[Enumerate SMB Share Null Session (connect)] smbclient \\\\<ipaddress>\\sharename
+[Enumerate SMB Share NULL Session] smbclient -L //<ipaddress>
+[Enumerate SMB Share NULL Session] smbclient --no-pass -L //<ipaddress>
+[Enumerate SMB Share as User] smbclient -L //<ipaddress> -U <username> (when prompted enter pass)
+[Connect to SMB Share] smbclient //<ipaddress>/<sharename> -U <username>
 [Connect to SMB Share with Domain and Password] smbclient //10.129.97.122/new-site --user=<username> --workgroup=<domain.local> --password='password'
 ```
 
