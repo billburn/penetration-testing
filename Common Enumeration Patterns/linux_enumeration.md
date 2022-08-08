@@ -2,7 +2,8 @@
 
 | Command | Summary |
 | ---------------------------- | ---------------------------- |
-| placeholder | This is placeholder text |
+| Find SUID files | ```find / -perm -u=s -type f 2>/dev/null``` |
+| Find SGID files | ```find / -perm -g=s -type f 2>/dev/null``` |
 
 
 | Check | Description |
