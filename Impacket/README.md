@@ -11,6 +11,12 @@ Sample Usage: $python3 impacket-smbserver -u myusername -p secretpassword myshar
 Tip: use $(pwd) for the current working  directory
 ```
 
+ ## Map Drive from CLI
+ ```
+ net use f: \\10.10.14.49\files /user:ph0enix password123
+ net use M: \\ip-address\share /Persistent:Yes
+ ```
+
 ## PSExec
 ```
 [Sample Usage] python3 psexec.py Administrator@10.10.10.10 (enter password when prompted)
