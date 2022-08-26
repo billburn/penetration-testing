@@ -36,3 +36,8 @@
  mkdir /mnt/vhd
  sudo guestmount --add 9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro -v /mnt/vhd
  ```
+
+ ## Extend Trial License
+ ```
+ slmgr.vbs -rearm
+ ```
