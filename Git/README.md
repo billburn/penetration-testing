@@ -24,3 +24,13 @@ git push
 ```
 git clone https://url-to-repo/repo.git
 ```
+
+## Check Global Username
+```
+git config --global user.name
+```
+
+## Check Glboal Email
+```
+git config --global user.email
+```
