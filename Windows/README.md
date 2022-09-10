@@ -41,3 +41,20 @@
  ```
  slmgr.vbs -rearm
  ```
+
+ ## Unattended Windows Installations
+ ```
+C:\Unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unattend.xml
+C:\Windows\system32\sysprep.inf
+C:\Windows\system32\sysprep\sysprep.xml
+ ```
+
+## Checking PowerShell History
+Powershell.exe does not recognize or use the %% reference, so need to use env variables
+
+```
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (cmd.exe)
+type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (powershell.exe)
+```

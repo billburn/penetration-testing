@@ -24,7 +24,9 @@
 | ```net accounts``` | Check the logs settings on a machine such as passowrd policy, etc.|
 | ```net accounts /domain``` | Check if the machine belongs to a domain | 
 | ```net share``` | Checks for a list of open shares |
- 
+| ```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history cmd.exe version |
+| ```type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history Powershell version |
+
 | Check | Description |
 | ---------------------------- | ---------------------------- |
 | PowerShell IWR vs IEX | Be sure to remember IEX will run the script in memory, useful for loading SharpHound.ps1 remotely |
@@ -35,6 +37,7 @@
 | Check with PowerUp.ps1 | Make sure you have modified the script to Invoke-AllChecks |
 | Older Windows OS Win7, Win2008 | Check MS10-059 (Chimichurri) ```https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059``` |
 | Be sure to check program files and (x86) | Enumerate all of the software that might be loaded on the machine |
+| Check for IIS credentials | ```type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString``` |
 
 ## Common Location for WSL.exe
 ```
