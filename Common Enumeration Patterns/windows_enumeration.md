@@ -19,7 +19,7 @@
 | ```wmic service where "name like 'service name'" get Name,PathName``` | Uses WMI to get service information | 
 | ```Get-Service \| where-object Name -match 'Service Name' ``` | Using Powershell search for service information |
 | ```Get-Process -Name name-of-process``` | Using Get-Process find process PID | 
-| ```netstat -noa |findstr "LISTENING" |findstr "1337" | Using the PID of the process, find out what port its running on | 
+| ```netstat -noa \|findstr "LISTENING" \|findstr "1337"``` | Using the PID of the process, find out what port its running on | 
  
 | Check | Description |
 | ---------------------------- | ---------------------------- |
