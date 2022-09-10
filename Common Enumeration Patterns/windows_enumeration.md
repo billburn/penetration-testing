@@ -24,8 +24,6 @@
 | ```net accounts``` | Check the logs settings on a machine such as passowrd policy, etc.|
 | ```net accounts /domain``` | Check if the machine belongs to a domain | 
 | ```net share``` | Checks for a list of open shares |
-| `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt` | Check PowerShell command history cmd.exe version |
-| ```$Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history Powershell version |
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
@@ -51,3 +49,9 @@ c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1
 
 ## Windows Kernel Exploits
 - [Windows Kernel Exploits](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS10-059)
+
+## Checking PowerShell Command History
+```
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
