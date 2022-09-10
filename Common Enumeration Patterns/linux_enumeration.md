@@ -2,10 +2,10 @@
 
 | Command | Summary |
 | ---------------------------- | ---------------------------- |
-| Find SUID files | ```find / -perm -u=s -type f 2>/dev/null``` |
-| Alternate Find SUID files | ```find / -type f -perm -04000 -ls 2>/dev/null``` |
-| Find SGID files | ```find / -perm -g=s -type f 2>/dev/null``` |
-
+| ```find / -perm -u=s -type f 2>/dev/null``` | Find SUID files |
+| ```find / -type f -perm -04000 -ls 2>/dev/null``` | Alternate find for SUID files |
+| ```find / -perm -g=s -type f 2>/dev/null``` | Find SGID files |
+| ```lsof -i``` | List Open Files for intrnet and network connections | 
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
