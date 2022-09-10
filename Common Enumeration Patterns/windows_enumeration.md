@@ -4,6 +4,7 @@
 | ---------------------------- | ---------------------------- |
 | ```dir <name of file> /s /p``` | Search the file system, recursively for the filename |
 | ```whoami /priv``` | Gets the privileges for current user context |
+| ```whoami /groups``` | Gets a listing of the groups for the current user context |
 | ```more < name_of_alternate_data_stream.txt``` | Returns the contents of the alternate data stream | 
 | ```cmdkey /list``` | We may get lucky and find stored credentials |
 | ```runas /savecred /user:DOM.LOCAL\Administrator "C:\Users\<user>\Documents\shell.exe"``` | If the user is storing creds, launch an msfvenom shell | 
@@ -20,6 +21,9 @@
 | ```Get-Service \| where-object Name -match 'Service Name' ``` | Using Powershell search for service information |
 | ```Get-Process -Name name-of-process``` | Using Get-Process find process PID | 
 | ```netstat -noa \|findstr "LISTENING" \|findstr "1337"``` | Using the PID of the process, find out what port its running on | 
+| ```net accounts``` | Check the logs settings on a machine such as passowrd policy, etc.|
+| ```net accounts /domain``` | Check if the machine belongs to a domain | 
+| ```net share``` | Checks for a list of open shares |
  
 | Check | Description |
 | ---------------------------- | ---------------------------- |
