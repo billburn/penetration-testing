@@ -24,8 +24,8 @@
 | ```net accounts``` | Check the logs settings on a machine such as passowrd policy, etc.|
 | ```net accounts /domain``` | Check if the machine belongs to a domain | 
 | ```net share``` | Checks for a list of open shares |
-| ```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history cmd.exe version |
-| ```type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history Powershell version |
+| ```%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history cmd.exe version |
+| ```$Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt``` | Check PowerShell command history Powershell version |
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
