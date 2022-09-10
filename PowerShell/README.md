@@ -112,3 +112,16 @@ PS $cred.GetNetworkCredential().Password
 ```
 type * | findstr "password"
 ```
+
+## Check for Antivirus
+```
+wmic /namespace:\\root\securitycenter2 path antivirusproduct
+Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct
+Get-Service WinDefend
+```
+
+## Is RealTimeProtectionEnabled
+```
+Get-MpComputerStatus | select RealTimeProtectionEnabled
+```
+

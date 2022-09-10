@@ -22,7 +22,7 @@
  ## Enable/Disable Windows Firewall CLI
  ```
  NetSh Advfirewall set allprofiles state on
- netsh advfirewall set allprofiles state off
+ NetSh advfirewall set allprofiles state off
  ```
 
  ## Enable RDP (Terminal Services)

