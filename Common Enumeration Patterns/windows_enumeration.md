@@ -25,6 +25,8 @@
 | ```net accounts /domain``` | Check if the machine belongs to a domain | 
 | ```net share``` | Checks for a list of open shares |
 | ```schtasks /query /tn vulntask /fo list /v``` | Check scheduled tasks for the taskname "vulntask" |
+| ```net stop service-name``` | Stops service |
+| ```net start service-name``` | Starts service |
 
 | Check | Description |
 | ---------------------------- | ---------------------------- |
