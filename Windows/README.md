@@ -58,3 +58,11 @@ Powershell.exe does not recognize or use the %% reference, so need to use env va
 type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (cmd.exe)
 type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (powershell.exe)
 ```
+
+## Disable LocalAccountTokenFilterPolicy 
+If you are in the Backup Operators group, if/when you login via WinRM you wont have any administrative privilges.  To fix this
+We need to elevate privileges via UAC, which is not possible through CLI, so we need to disable the registry setting
+
+```
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /t REG_DWORD /v LocalAccountTokenFilterPolicy /d 1
+```
