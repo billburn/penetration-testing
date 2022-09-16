@@ -132,3 +132,32 @@ Powershell.exe does not recognize or use the %% reference, so need to use env va
 type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (cmd.exe)
 type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (powershell.exe)
 ```
+
+## Get List of Installed Software
+```
+get-ciminstance win32_product | fl
+```
+
+## Get a list of Installed Software (exclude Microsoft)
+```
+get-ciminstance win32_product -Filter "NOT Vendor like '%Microsoft%'" | fl
+```
+
+## PowerShell Operators
+| Filter | Meaning |
+| ---------------------------- | ---------------------------- |
+| -eq	| Equal to |
+| -le	| Less than or equal to |
+| -ge	| Greater than or equal to |
+| -ne	| Not equal to |
+| -lt	| Less than |
+| -gt	| Greater than |
+| -approx | Approximately equal to |
+| -bor | Bitwise OR |
+| -band	| Bitwise AND |
+| -recursivematch	| Recursive match |
+| -like | Like |
+| -notlike| Not Like |
+| -and| Boolean AND |
+| -or	| Boolean OR |
+| -not |Boolean NOT |
