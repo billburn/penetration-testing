@@ -1,4 +1,4 @@
-# Ldapsearch
+# LdapFilter and LdapSearch
 
 ## Ldapsearch to get Naming Contexts
 ```
