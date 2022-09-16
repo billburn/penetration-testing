@@ -143,6 +143,34 @@ get-ciminstance win32_product | fl
 get-ciminstance win32_product -Filter "NOT Vendor like '%Microsoft%'" | fl
 ```
 
+## Get-ADUser
+All three are valid syntaxes
+
+```
+`Get-ADUser -Filter "name -eq 'sally jones'"`
+`Get-ADUser -Filter {name -eq 'sally jones'}`
+`Get-ADUser -Filter 'name -eq "sally jones"'`
+```
+
+## Get-ADUser (wildcard for any user name with joe)
+```
+Get-ADUser -filter {-name -like "joe*"}
+```
+
+## Escape Characters
+| Character | Escaped As | Note |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| " | \\" | Only needed if the data is enclosed in double-quotes |
+| ' | \\' | Only needed if the data is enclosed in single-quotes |
+| NUL | \00 | Standard LDAP escape sequence |
+| \ | \5c | Standard LDAP escape sequence |
+| * | \2a | Escaped automatically, but only in -eq and -ne. Use -like and -notlike for wildcard comparison |
+| () | 28 | Escaped automatically |
+| ) | 29 | Escaped automatically |
+| / | /2f | Escaped automatically |
+
+
+
 ## PowerShell Operators
 | Filter | Meaning |
 | ---------------------------- | ---------------------------- |
