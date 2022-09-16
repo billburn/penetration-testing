@@ -17,3 +17,15 @@ python3 RDPassSpray.py -u victim -p Spring2021! -t 10.100.10.240:3026
 
 ## MailSniper
 [MailSniper Github](https://github.com/dafthack/MailSniper)
+
+## Possible Passwords for Guessing
+```
+password
+Password1
+Passw0rd
+Welcome1
+AutumnYY
+SpringYY
+SummerYY
+WinterYY
+```
