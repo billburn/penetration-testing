@@ -157,6 +157,12 @@ All three are valid syntaxes
 Get-ADUser -filter {-name -like "joe*"}
 ```
 
+## Get-ADComputer (filter for hostnames with SQL)
+```
+Get-ADComputer -Filter "DNSHostName -like 'SQL*'"
+```
+
+
 ## Escape Characters
 | Character | Escaped As | Note |
 | ---------------------------- | ---------------------------- | ---------------------------- |
