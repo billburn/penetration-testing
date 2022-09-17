@@ -65,6 +65,7 @@ python ldapsearch-ad.py -l 10.129.113.91 -d domain.local -u james.cross -p 'ente
 ```
 python ldapsearch-ad.py -l 10.129.113.91 -d inlanefreight -u james.cross -p 'Academy_Student!' -t kerberoast 
 ```
+
 ## Ldapsearch-ad (get asrep-roastable users)
 ```
 python ldapsearch-ad.py -l 10.129.113.91 -d inlanefreight -u james.cross -p 'Academy_Student!' -t asreproast
