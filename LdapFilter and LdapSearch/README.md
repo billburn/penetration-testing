@@ -1,5 +1,20 @@
 # LdapFilter and LdapSearch
 
+## SearchBase
+SearchBase is a parameter that specifies an ActiveDirectory path to search in a specific OU
+```
+"OU=Employees,DC=DomainName,DC=LOCAL"
+```
+
+## SearchScope
+SearchScope allow us to define how deep into the OU hierarchy we would like to search.  SearchScope has three levels
+
+| Name | Level | Description |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| Base | 0 | The object us specified as the SearchBase |
+| OneLevel | 1 | Searches for objects in the container defined by SearchBase, but not in any sub-containers |
+| SubTree | 2 | Searches for objects contained by the SearchBase and all child containers, recursively |
+
 ## Ldapsearch to get Naming Contexts
 ```
 ldapsearch -H ldap://10.10.10.182 -x -s base namingcontexts

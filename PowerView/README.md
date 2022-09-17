@@ -53,3 +53,14 @@ $cred = New-Object System.Management.Automation.PSCredential('HTB\Herman', $pass
 Add-DomainGroupMember -Identity 'Backup_Admins' -Members Herman -Credential $cred
 Get-DomainGroup -MemberIdentity Herman | select SamAccountName
 ```
+
+## Get UserAccountControl for Domain Users
+```
+Import-Module .\PowerView.ps1 OR . .\PowerView.ps1
+Get-DomainUser * -AdminCount | select samaccountname,useraccountcontrol
+```
+
+## DSQuery (find passwords that dont expire)
+```
+dsquery user "OU=Employees,DC=inlanefreight,DC=local" -name * -scope subtree -limit 0 | dsget user -samid -pwdneverexpires | findstr /V no
+```
