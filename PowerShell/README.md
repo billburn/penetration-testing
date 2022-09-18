@@ -212,6 +212,25 @@ Get-ADGroup -Filter 'member -RecursiveMatch "CN=Harry Jones,OU=Network Ops,OU=IT
 (Get-ADUser -SearchBase "OU=IT,OU=Employees,DC=INLANEFREIGHT,DC=LOCAL" -SearchScope Subtree -Filter *).count
 ```
 
+## Get-ADGroup (find all nested groups)
+```
+Get-ADGroup -filter * -Properties MemberOf | Where-Object {$_.MemberOf -ne $null} | Select-Object Name,MemberOf
+```
+
+## Get-ADGroupMember (find all members of group)
+Get-ADGroupMember -Identity 'Service Technicians' | ?{$_.ObjectClass -eq "Group"} | %{Write-Host $_.Name;Get-ADGroupMember $_ }
+
+## Get-ADUser (count members in a group)
+```
+(Get-ADUser -Filter * -SearchBase "OU=Former Employees,DC=INLANEFREIGHTENUM1,DC=LOCAL").count
+```
+
+## Get-ADGroup (where adminCount = 1)
+```
+Get-ADGroup -Filter "adminCount -eq 1"
+```
+
+
 ## Escape Characters
 | Character | Escaped As | Note |
 | ---------------------------- | ---------------------------- | ---------------------------- |
