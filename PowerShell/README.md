@@ -15,6 +15,8 @@
 ## Importing Module
 ```
 Import-Module <name of ps1>
+OR
+. .\powershell-script.ps1
 ```
 
 ## Checking Services
