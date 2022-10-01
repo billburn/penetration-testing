@@ -130,7 +130,7 @@ Enable-PSRemoting
 ## Enable WinRM on Client
 ```
 start-service winrm
-ls wsman:\localhost\
+ls wsman:\localhost\Client\TrustedHosts
 ```
 
 ## Set Trusted Host on Client
@@ -155,7 +155,7 @@ $username = 'Administrator'
 $password = 'P@ssw0rd123'
 $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
-New-PSSession -ComputerName 192.168.10.15 -Credential
+New-PSSession -ComputerName 192.168.10.15 -Credential $cred
 Get-PSsession
 Enter-PSSession <num>
 ```
