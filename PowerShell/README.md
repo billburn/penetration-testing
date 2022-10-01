@@ -170,7 +170,7 @@ Get-PSSession
 Get-PSSession | Remove-PSSession
 ```
 
-[Microsoft Help](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/remove-pssession?view=powershell-7.2)
+[Microsoft Help for PSSession](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/remove-pssession?view=powershell-7.2)
 
 ## Search all files for keyword
 ```
