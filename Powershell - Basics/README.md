@@ -29,3 +29,24 @@ powershell -c get-service AdvancedSystemCareService9
 powershell -c stop-service AdvancedSystemCareService9
 powershell -c start-service AdvancedSystemCareService9
 ```
+
+## Create New-PSSession with Credentials
+```
+$username = 'Administrator'
+$password = 'P@ssw0rd123'
+$securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+New-PSSession -ComputerName 192.168.10.15 -Credential $cred
+Get-PSsession
+Enter-PSSession <num>
+```
+
+## Get all PSSessions
+```
+Get-PSSession
+```
+
+## Delete all PSSessions
+```
+Get-PSSession | Remove-PSSession
+```
