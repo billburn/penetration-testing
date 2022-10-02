@@ -18,3 +18,9 @@
 | NA | Get-ADUser -Filter * -Properties * \| select samaccountname, description, whenchanged | AD Module example to filter domain users by properties |
 | Get-NetUser -properties name, pwdlastset, etc... | Get-ADUser -Filter * -Properties * \| select SamAccountName,PasswordLastSet | Another example of filtering properties |
 | Get-NetUser -properties name, description | Get-ADUser -Filter * -Properties * \| select name,description | Check description field for passwords |
+
+
+## Appendix 
+[PowerView -ReadTheDocs](https://powersploit.readthedocs.io/en/stable/Recon/README/#powerview)
+[Powershell Active Directory Module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/?view=windowsserver2022-ps)
+[HackTricks PowerView](https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview)
