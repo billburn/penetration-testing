@@ -16,3 +16,4 @@
 | Get-UserProperty | Get-ADUser -Filter -Properties * | Gets all properties for all users in the domain |
 | Get-NetUser \| select samaccountname, description, pwdlastset | | PowerView example to filter domain users by properties |
 | NA | Get-ADUser -Filter * -Properties * \| select samaccountname, description, whenchanged | AD Module example to filter domain users by properties |
+| Get-NetUser -properties name, pwdlastset, etc... | Get-ADUser -Filter * -Properties * \| select SamAccountName,PasswordLastSet | Another example of filtering properties |
