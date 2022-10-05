@@ -5,6 +5,7 @@
 - Defautl database is /usr/share/responder/Responder.db (sqlite DB)
 - Default configuration file is /usr/share/responder/Responder.conf
 - If relaying with nltmx make sure to disable smb in Responder.conf ^^
+- Hashcat mode for NetNTLMv2 is 5600
 
 ## Responder Usage
 ```
