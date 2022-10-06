@@ -71,6 +71,15 @@ python ldapsearch-ad.py -l 10.129.113.91 -d inlanefreight -u james.cross -p 'Aca
 python ldapsearch-ad.py -l 10.129.113.91 -d inlanefreight -u james.cross -p 'Academy_Student!' -t asreproast
 ```
 
+## Ldapearch (get password policy)
+```
+ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength
+```
+
+## Ldapsearch (get users)
+```
+ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclass=user))"  | grep sAMAccountName: | cut -f2 -d" "
+```
 
 ## LdapWiki
 To run any of these queries be sure to use the Get-AdObject cmdlet with the -LdapFilter ' Enter Command Here'

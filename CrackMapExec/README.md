@@ -27,3 +27,9 @@ crackmapexec smb <target(s)> -u '' -p ''
 crackmapexec smb <target(s)> -u username -H LMHASH:NTHASH
 crackmapexec smb <target(s)> -u username -H NTHASH
 ```
+
+## Get Users
+```
+crackmapexec smb <target> --users
+crackmapexec smb <target> -u username -p password --users
+```
