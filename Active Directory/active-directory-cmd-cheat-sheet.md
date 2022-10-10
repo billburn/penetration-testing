@@ -73,5 +73,3 @@ Check for a computer named "name" and view its properties.
     
 [Microsoft](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)   
      
-
-----
