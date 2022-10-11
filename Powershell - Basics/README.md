@@ -50,3 +50,11 @@ Get-PSSession
 ```
 Get-PSSession | Remove-PSSession
 ```
+
+## Disable Defender and AV (Elevate to Admin)
+```
+Set-MpPreference -DisableRealtimeMonitoring $true
+Set-MpPreference -DisableBehaviorMonitoring $true
+Set-MpPreference -MAPSReporting Disabled
+Set-MpPreference -SubmitSamplesConsent NeverSend
+```
