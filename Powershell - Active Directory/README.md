@@ -289,6 +289,16 @@ Get-ADGroupMember -Identity 'Service Technicians' | ?{$_.ObjectClass -eq "Group"
 Get-ADGroup -Filter "adminCount -eq 1"
 ```
 
+## Check Languge Contrained Mode
+There are three modes:
+- NoLanguage
+- FullLanguage
+- ConstrainedLanguage
+
+```
+$ExecutionContext.SessionState.LanguageMode
+```
+
 ## Ways to Bypass Execution Policy
 ```
 powershell -ExecutionPolicy bypass -NoProfile
@@ -296,6 +306,8 @@ powershell -c <cmd>
 powershell -encodedcommand
 $env:PSExecutionPolicyPreference="bypass"
 ```
+
+
 
 ## Escape Characters
 | Character | Escaped As | Note |
