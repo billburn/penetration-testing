@@ -47,6 +47,11 @@ Invoke-DomainPasswordSpray -UserList users.txt -Domain domain-name -PasswordList
 Invoke-DomainPasswordSpray -UserList .\valid_users.txt -Domain inlanefreight.local -Password Welcome1 -OutFile spray_success_02 -ErrorAction SilentlyContinue
 ```
 
+## MSOLSpray
+```
+Invoke-MSOLSpray -UserList .\userlist.txt -Password <password to spray>
+```
+
 ## Potential Starting Password Sprays
 ```
 password
@@ -67,3 +72,6 @@ WinterYY
 
 ## DomainPasswordSpray
 [Domain Password Spray](https://github.com/dafthack/DomainPasswordSpray)
+
+## MSOLSpray
+[MSOLSpray](https://github.com/dafthack/MSOLSpray)
