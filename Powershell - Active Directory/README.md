@@ -1,5 +1,17 @@
 # PowerShell Active Directory Enumeration
 
+## Bypassing PowerShell Security with Invishell
+```
+C:\InviShell\RunWithRegistryNonAdmin.bat
+C:\InviShell\RunWithPathAsAdmin.bat
+```
+
+## Importing PowerShell Manually
+```
+Import-Module Microsoft.ActiveDirectory.Management.dll
+Import-Module ActiveDirectory.psd1
+```
+
 ## Get Current AD Domain
 ```
 $ADClass = [System.DirectoryServices.ActiveDirectory.Domain]
@@ -10,9 +22,9 @@ $ADClass::GetCurrentDomain()
 All three are valid syntaxes
 
 ```
-`Get-ADUser -Filter "name -eq 'sally jones'"`
-`Get-ADUser -Filter {name -eq 'sally jones'}`
-`Get-ADUser -Filter 'name -eq "sally jones"'`
+Get-ADUser -Filter "name -eq 'sally jones'"
+Get-ADUser -Filter {name -eq 'sally jones'}
+Get-ADUser -Filter 'name -eq "sally jones"'
 ```
 
 ## Get-ADUser (wildcard for any user name with joe)
@@ -102,4 +114,3 @@ There are three modes:
 ```
 $ExecutionContext.SessionState.LanguageMode
 ```
-
