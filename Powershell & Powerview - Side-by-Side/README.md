@@ -22,6 +22,8 @@
 | Get-NetUser -properties name, description | Get-ADUser -Filter * -Properties * \| select name,description | Check description field for passwords |
 | Get-DomainComputer \| select Name | Get-ADComputer -Filter * \| select Name | Gets a list of computers in the domain |
 | Get-DomainComputer -OperatingSystem "\*Server 2016\*" | Get-ADComputer -Filter 'OperatingSystem -like "\*Server 2016\*"' -Properties OperatingSystem \| select Name,OperatingSystem | Gets a list of computers in the domain running Server 2016 |
+| Get-DomainGroup \| select Name | Get-ADGroup -Filter \* \| select Name | Get all the groups in the current domain |
+| Get-DomainGroup -Domain domain.local \| select Name | Get-ADGroup -Filter \* -Properties \* | Get all group propertues in the current domain |
 
 
 ## Appendix 
