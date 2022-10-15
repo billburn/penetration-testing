@@ -8,6 +8,13 @@ find /home/user -type d -print0 | xargs -0 chmod 0775
 find /home/user -type f -print0 | xargs -0 chmod 0664
 ```
 
+## Hold / Unhold Updates
+```
+sudo apt-mark hold <package-name>
+sudo apt-mark unhold <package-name>
+sudo apt-mark showhold
+```
+
 ## Grep all file for string
 ```
 grep -ilR "flag11" / 2>/dev/null

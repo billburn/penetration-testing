@@ -2,8 +2,8 @@
 
 ## Bypassing PowerShell Security with Invishell
 ```
-C:\InviShell\RunWithRegistryNonAdmin.bat
-C:\InviShell\RunWithPathAsAdmin.bat
+C:\InviShell\RunWithPathAsAdmin.bat (with admin)
+C:\InviShell\RunWithRegistryNonAdmin.bat (without admin)
 ```
 
 ## Importing PowerShell Manually
