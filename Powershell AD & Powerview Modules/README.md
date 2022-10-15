@@ -52,6 +52,7 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainGroup \| select Name | Get all the groups in the current domain |
 | Get-DomainGroup -Domain domain.local \| select Name | Get all group propertues in the current domain |
 
+---
 
 | PowerShell AD Module | Description |
 | ---------------------------- | ---------------------------- |
