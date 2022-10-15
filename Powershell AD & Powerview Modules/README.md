@@ -51,6 +51,9 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainComputer -OperatingSystem "\*Server 2016\*" | Gets a list of computers in the domain running Server 2016 |
 | Get-DomainGroup \| select Name | Get all the groups in the current domain |
 | Get-DomainGroup -Domain domain.local \| select Name | Get all group propertues in the current domain |
+| Get-DomainGroup \*admin\* | Get all groups containing the word "admin" | 
+| Get-DomainGroupMember -Identity "Domain Admins" -Recurse | Get all members of the Domain Admins Group |
+| Get-DomainGroup -UserName "username" | Get the group membership for \<username\> |
 
 ---
 
@@ -88,10 +91,12 @@ Get-AdUser -LDAPFilter '(&(objectCategory=person)(objectClass=user)(userAccountC
 | Get-ADGroup -Filter \* \| select Name | Get all the groups in the current domain |
 | Get-ADGroup -Filter \* -Properties \* | Get all group propertues in the current domain |
 | Get-ADGroup -Filter "adminCount -eq 1" \| select Name | Find AD groups and filter for Admins | 
-| Get-ADGroupMember -Identity 'Service Technicians' \| ?{$_.ObjectClass -eq "Group"} \| %{Write-Host $_.Name;Get-ADGroupMember $_ } | Get-ADGroupMember (find all members of group) |
+| Get-ADGroupMember -Identity 'Service Technicians' \| ?{$\_.ObjectClass -eq "Group"} \| %{Write-Host $_.Name;Get-ADGroupMember $_ } | Get-ADGroupMember (find all members of group) |
 | Get-ADGroup -filter * -Properties MemberOf \| Where-Object {$_.MemberOf -ne $null} \| Select-Object Name,MemberOf | Get-ADGroupMember (find all nest groups) |
 | Get-ADGroup -Filter 'member -RecursiveMatch "CN=Harry Jones,OU=Network Ops,OU=IT,OU=Employees,DC=INLANEFREIGHT,DC=LOCAL"' \| select name | Recursive search for all groups of a member |
-| Get-ADGroupMember -Identity "Security Operations" | Get a list of members for specific group | 
+| Get-ADGroup -Filter 'Name -like "\*admin\*" | Get all groups containing the word "admin" |
+| Get-ADGroupMember -Identity "Domain Admins" -Recursive | Get all members of the Domain Admins Group | 
+| Get-ADPrincipalGroupMembership -Identity username | Get the group membership for \<username\> |
 
 
 
