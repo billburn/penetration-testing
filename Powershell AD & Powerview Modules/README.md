@@ -54,6 +54,18 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainGroup \*admin\* | Get all groups containing the word "admin" | 
 | Get-DomainGroupMember -Identity "Domain Admins" -Recurse | Get all members of the Domain Admins Group |
 | Get-DomainGroup -UserName "username" | Get the group membership for \<username\> |
+| Get-NetLocalGroup -ComputerName dcorp-dc -ListGroups | Lists all the local groups (needs admin privs on non-dc machines) |
+| Get-NetLocalGroup -ComputerName dcorp-dc -Recurse | Lists members of all local groups (needs admin privs on non-dc machines) |
+| Get-NetLocalGroup -ComputerName dcorp-dc -GroupName Administrators| Lists members of "Administratprs" group (needs admin privs on non-dc machines) |
+| Get-NetLoggedOn -ComputerName \<computer name\> | Gets logged on users on a computer (needs local admin privs on target) |
+| Get-LoggedOnLocal -ComputerName \<computer name\> | Gets locally logged on users on a computer (needs local admin privs on target) |
+| Get-LastLoggedOn -ComputerName \<computer name\> | Gets last logged on user on a computer (needs local admin privs on target) |
+| Invoke-ShareFinder -Verbose | Find shares on hosts in current domain |
+| Invoke-FileFinder -Verbose | Find sensitive files on computers in the domain |
+| Get-NetFileServer | Get all fileserver in the domain | 
+| Get-DomainGPO | Lists all the GPOs in the current domain | 
+| Get-DomainGPO -ComputerIdentity \<computer name\> | Lists all the GPOs for the specific computer |
+
 
 ---
 
