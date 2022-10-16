@@ -65,6 +65,9 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-NetFileServer | Get all fileserver in the domain | 
 | Get-DomainGPO | Lists all the GPOs in the current domain | 
 | Get-DomainGPO -ComputerIdentity \<computer name\> | Lists all the GPOs for the specific computer |
+| Get-DomainGPOLocalGroup | Lists GPO(s) which use restricted groups ir groups.xml |
+| Get-DomainGPOComputerLocalGroupMapping -ComputerIdentity \<computer name\> | Gets users which are in a local group of a machine using GPO |
+| Get-DomainGPOUserLocalGroupMapping -Identity \<username\> -Verbose | Get machines where the username is a member of a specific group |
 
 
 ---
