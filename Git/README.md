@@ -34,3 +34,12 @@ git config --global user.name
 ```
 git config --global user.email
 ```
+
+## Updating Access Token
+```
+Generate new token (make sure to include READ org)
+gh auth login
+Select GH Server
+HTTPS Login
+Paste Access Token
+```
