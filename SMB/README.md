@@ -30,6 +30,11 @@ smbmap -u <username> -p <password> -H <ip address> [-P <port>] #Creds
 smbmap -u <username> -p "<NT>:<LM>" -H <ip address> [-P <port>] #Pass-the-Hash
 ```
 
+## SMBMap Recursive Search on Share
+```
+smbmap -u username -p password -d domainname.local -H 172.16.5.5 -R 'Department Shares' --dir-only
+```
+
 ## RPCClient
 ```
 rpcclient -U "" -N 192.168.10.14
