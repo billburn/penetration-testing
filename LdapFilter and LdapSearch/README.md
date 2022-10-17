@@ -56,6 +56,16 @@ python windapsearch.py --dc-ip 10.129.42.188 -u "" --functionality
 python3 windapsearch.py --dc-ip 10.129.1.207 -u "" -U
 ```
 
+## Windapsearch (Domain Admins)
+```
+python windapsearch.py -d INLANEFREIGHT.LOCAL --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 --da
+```
+
+## Windapsearch (Priviged Users)
+```
+python windapsearch.py -d INLANEFREIGHT.LOCAL --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 -PU
+```
+
 ## Ldapsearch-ad (get password policy)
 ```
 python ldapsearch-ad.py -l 10.129.113.91 -d domain.local -u james.cross -p 'enter_password' -t pass-pols
