@@ -64,3 +64,38 @@ Get-DomainUser * -AdminCount | select samaccountname,useraccountcontrol
 ```
 dsquery user "OU=Employees,DC=inlanefreight,DC=local" -name * -scope subtree -limit 0 | dsget user -samid -pwdneverexpires | findstr /V no
 ```
+
+## PowerView Most Used Commands 
+[Additional Reference: PowerShell and PowerView Modules](../Powershell%20AD%20%26%20Powerview%20Modules/README.md)
+
+| Command | Description | 
+| ---------------------------- | ---------------------------- |
+| Export-PowerViewCSV | Append results to a CSV file | 
+| ConvertTo-SID | Convert a user or group NAME to SID value | 
+| Get-DomainSPNTicket | Requests the Kerberos ticket for a specified Service Principal Name (SPN) account | 
+| Get-Domain | Returns the AD object for the current or specific domain | 
+| Get-DomainController | Return a list of Domain Controllers for the specified domain | 
+| Get-DomainUser | Will return all users or specific user objects in AD | 
+| Get-DomainComputer | Will return all computers or specific computer objects in AD | 
+| Get-DomainGroup | Will return all groups or specific group objects in AD | 
+| Get-DomainOU | Search for all or specific OU in AD | 
+| Find-InterestingDomainAcl | Finds object ACLs in the domain with modification rights set to non-built in objects | 
+| Get-DomainGroupMember | Will return the members of a specific domain group | 
+| Get-DomainFileServer | Returns a list of servers likely functioning as file servers | 
+| Get-DomainDFSShare | Returns a list of all distributed file systems for the current (or specified) domain | 
+| Get-DomainGPO | Will return all GPOs or specific GPO objects in AD | 
+| Get-DomainPolicy | Returns the default domain policy or the domain controller policy for the current domain | 
+| Get-NetlocalGroup | Enumerates local groups on the local or a remote machine | 
+| Get-NetLocalGroupMember | Enumerates member of a specific local group | 
+| Get-NetShare | Returns open shares on the local (or remote) machine | 
+| Get-NetSession | Will return session information for the local (or a remote) machine | 
+| Test-AdminAccess | Tests if the current user has admin access to the local or a remote machine | 
+| Find-DomainUserLocation | Finds machines where specific users are logged in | 
+| Find-DomainShare | Finds reachable shares on domain machines | 
+| Find-InterestingDomainShareFile | Searches for files matching specific criteria on readable shares in the domain | 
+| Find-LocalAdminAccess | Find machines on the local domain where the current user has local admin access | 
+| Get-DomainTrust | Returns domain trusts for the current domain or a specified domain | 
+| Get-ForestTrust | Returns all forest trusts for the current forest or a specified forest | 
+| Get-DomainForeignUser | Enumerates users who are in groups outside of the user's domain | 
+| Get-DomainForeignGroupMember | Enumerates groups with users outside of the group's domain and returns each foreign member | 
+| Get-DomainTrustMapping | Will enumerate all trusts for the current domain and any others seen | 
