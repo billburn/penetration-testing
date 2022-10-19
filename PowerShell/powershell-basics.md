@@ -11,6 +11,7 @@
 | Get-Command -CommandType cmdlet | This provides a list of ALL available cmdlets on your system |
 | Get-Process | This lists the processes running on your host (like ps -aux on nix) |
 | Get-Command -Module Get-FileHash | Provides a list of all commands in module | 
+| Get-Process \| select -First 10 | This command will limit the output to the first 10 results | 
 
 ## Get PowerShell Version
 ```
