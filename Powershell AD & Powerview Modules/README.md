@@ -44,6 +44,7 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainUser -Identity username | Gets information about a single AD user |
 | Get-DomainUser -Identity username -Properties * | Gets all properties for all users in the domain |
 | Get-DomainUser -LdapFilter "Description=\*Built\*" \| Select name, description | Search domain users with specific attributes |
+| Get-DomainUser -SPN -Properties samaccountname,serviceprincipalname | Finds all Kerberoastable users |
 | Get-NetUser \| select samaccountname, description, pwdlastset | PowerView example to filter domain users by properties |
 | Get-NetUser -properties name, pwdlastset, etc... | Another example of filtering properties |
 | Get-NetUser -properties name, description |Check description field for passwords |

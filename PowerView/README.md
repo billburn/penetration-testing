@@ -99,3 +99,5 @@ dsquery user "OU=Employees,DC=inlanefreight,DC=local" -name * -scope subtree -li
 | Get-DomainForeignUser | Enumerates users who are in groups outside of the user's domain | 
 | Get-DomainForeignGroupMember | Enumerates groups with users outside of the group's domain and returns each foreign member | 
 | Get-DomainTrustMapping | Will enumerate all trusts for the current domain and any others seen | 
+
+- Another alternative to PowerView is the C# version called, SharpView.  Many of the same commands will work.
