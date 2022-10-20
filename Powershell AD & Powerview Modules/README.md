@@ -70,7 +70,6 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainGPOComputerLocalGroupMapping -ComputerIdentity \<computer name\> | Gets users which are in a local group of a machine using GPO |
 | Get-DomainGPOUserLocalGroupMapping -Identity \<username\> -Verbose | Get machines where the username is a member of a specific group |
 
-
 ---
 
 | PowerShell AD Module | Description |
