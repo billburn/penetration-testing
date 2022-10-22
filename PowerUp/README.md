@@ -1,16 +1,7 @@
 # PowerUp Module
 
-## Find Unquoted Service Paths
-```
-Get-ServiceUnquoted -Verbose
-```
-
-## Find Services Writeable By Current User
-```
-Get-ModifiableServiceFile -Verbose
-```
-
-## Find Services Whoe Configuration Can Be Modified
-```
-Get-MOdifiableService -Verbose
-```
+| PowerUp | Description |
+| ---------------------------- | ---------------------------- |
+| Get-ServiceUnquoted -Verbose | Finds services with unquoted service paths in their name |
+| Get-ModifiableServiceFile -Verbose | Finds services where the current user can write to its binary path or change arguments | 
+| Get-MOdifiableService -Verbose | Finds services whose configuration the current user can modify | 

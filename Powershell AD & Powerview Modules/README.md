@@ -29,6 +29,7 @@ $ExecutionContext.SessionState.LanguageMode
 ```
 
 ## Active Directory Domain Enumeration
+
 | PowerView | Description |
 | ---------------------------- | ---------------------------- |
 | Get-NetDomain | Gets domain information |
@@ -69,6 +70,12 @@ $ExecutionContext.SessionState.LanguageMode
 | Get-DomainGPOLocalGroup | Lists GPO(s) which use restricted groups ir groups.xml |
 | Get-DomainGPOComputerLocalGroupMapping -ComputerIdentity \<computer name\> | Gets users which are in a local group of a machine using GPO |
 | Get-DomainGPOUserLocalGroupMapping -Identity \<username\> -Verbose | Get machines where the username is a member of a specific group |
+| Find-LocalAdminAccess -Verbose | Find all machines on the current domain with the current user has local admin access |
+| Find-DomainUserLocation -Verbose | Find computers where a domain admin has a session |
+| Find-DomainUserLocation -UserGroupIdentity "RDPUsers" | Find computers where a domain admin has a session, by group |
+| Get-DomainGroupMember | Gets a list of group members for a given group, Domain Admins by default |
+| Find-DomainUserLocation -CheckAccess | Similar to Find-LocalAdminAccess this finds computers where a domain admin session is available |
+| 
 
 ---
 
@@ -112,6 +119,8 @@ Get-AdUser -LDAPFilter '(&(objectCategory=person)(objectClass=user)(userAccountC
 | Get-ADGroup -Filter 'Name -like "\*admin\*" | Get all groups containing the word "admin" |
 | Get-ADGroupMember -Identity "Domain Admins" -Recursive | Get all members of the Domain Admins Group | 
 | Get-ADPrincipalGroupMembership -Identity username | Get the group membership for \<username\> |
+
+
 
 
 

@@ -1,10 +1,5 @@
 # PowerShell Remoting
 
-## Enable PS Remoting on Server
-```
-Enable-PSRemoting
-```
-
 ## Enable WinRM on Client
 ```
 start-service winrm
@@ -38,14 +33,14 @@ Get-PSsession
 Enter-PSSession <num>
 ```
 
-## Get all PSSessions
-```
-Get-PSSession
-```
-
-## Delete all PSSessions
-```
-Get-PSSession | Remove-PSSession
-```
+| PowerShell Remoting | Description |
+| ---------------------------- | ---------------------------- |
+| Enable-PSRemoting | Enables PowerShell Remoting |
+| Get-PSSession | Lists all PS Sessions |
+| Get-PSSession \| Remove-PSSession | Removes the current PS Session |
+| Invoke-Command -ScriptBlock {Get-Process} -ComputerName \<computer_name\> | Requires privileges, but will remotely list process on remote host |
+| $sess = New-PSSession -ComputerName dcorp-adminsrv | Save a PS Remote session into a variable |
+| Invoke-Command -Session $sess -ScriptBlock {$proc = Get-Process} | Save Processes from remote ession in a variable | 
+| Invoke-Command -Session $sess -ScriptBlock {$proc} | Using stateful command, running the same get-process command on the remote host |
 
 [Microsoft Help for PSSession](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/remove-pssession?view=powershell-7.2)
