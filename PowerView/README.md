@@ -76,6 +76,7 @@ dsquery user "OU=Employees,DC=inlanefreight,DC=local" -name * -scope subtree -li
 | Get-Domain | Returns the AD object for the current or specific domain | 
 | Get-DomainController | Return a list of Domain Controllers for the specified domain | 
 | Get-DomainUser | Will return all users or specific user objects in AD | 
+| Get-DomainUser -UACFilter ACCOUNTDISABLE \| select samaccountname,description | Find all disabled users, only output samaccountname and description|
 | Get-DomainComputer | Will return all computers or specific computer objects in AD | 
 | Get-DomainGroup | Will return all groups or specific group objects in AD | 
 | Get-DomainOU | Search for all or specific OU in AD | 
