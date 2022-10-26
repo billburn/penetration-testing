@@ -1,4 +1,7 @@
 # Windows Enumeration Tips
+
+## Net Commands
+[Windows Net Commands](./net-commands.md)
  
  ## Searching files with dir
  ```

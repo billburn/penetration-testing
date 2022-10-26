@@ -1,4 +1,6 @@
+# Windows Net Commands
 
+## Windows Net Commands
 | Command | Description |
 | ---------------------------- | ---------------------------- |
 | net accounts | Returns information about password requirements |
