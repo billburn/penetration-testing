@@ -10,3 +10,8 @@ Golden Ticket - Full domain compromise (domain admin) required
 Silver Ticket - Service hash required 
 Skeleton Key - Full domain compromise (domain admin) required
 ```
+
+## List Tickets on Windows Machine
+```
+klist
+```
