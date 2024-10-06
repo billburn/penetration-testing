@@ -13,6 +13,9 @@
 | Get-Command -Module Get-FileHash | Provides a list of all commands in module | 
 | Get-Process \| select -First 10 | This command will limit the output to the first 10 results | 
 
+## Find PowerShell History Location
+``` (Get-PSReadlineOption).HistorySavePath ```
+
 ## Get PowerShell Version
 ```
 (Get-ItemProperty HKLM:\Software\Microsoft\PowerShell\*\PowerShellEngine -Name PowerShellVersion).PowerShellVersion
